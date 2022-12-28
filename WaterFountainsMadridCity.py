@@ -7,7 +7,7 @@ from shapely.geometry import Point, shape
 #Loading data from public csv (attached)
 fuentes_df = pd.read_csv("Inventario_Fuentes2019.csv", encoding= 'unicode_escape',sep = ';') 
 
-#Cleaing and glanze of latitued and longiuted columns
+#Cleaning and glanze of latitued and longiuted columns
 fuentes_df = fuentes_df.dropna(subset=['LATITUD', 'LONGITUD'])
 fuentes_df.dtypes
 fuentes_df['LONGITUD'] = pd.to_numeric(fuentes_df.LONGITUD, errors='coerce')
